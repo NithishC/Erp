@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Faculty Profile</title>
+    </head>
+    <body>
+        <h2><span>Welcome {{user|title}}</span></h2>
+        DEPARTMENT OF INFORMATION TECHNOLOGY<br>
+
+        <ol>
+         
+            {% for i in ob %}
+            
+            <h3><li><i class="fa fa-file-pdf-o" style="font-size:26px" aria-hidden="true">{{i.user}}&nbsp&nbsp&nbsp&nbsp{{i.act}}&nbsp&nbsp&nbsp&nbsp{{i.des}}&nbsp&nbsp&nbsp&nbsp</i><a  href="{{i.pdf.url}}" target="blank"><i class="fa fa-file-pdf-o" style="font-size:26px" aria-hidden="true">{{i.pdf}}</i></a></li></h3><br>
+            
+            {% endfor %}
+
+        </ol>
+
+    </body>
+</html>

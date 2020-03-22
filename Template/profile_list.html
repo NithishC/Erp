@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Faculty Profile List</title>
+    </head>
+    <body>
+        <h2><span>Welcome {{user|title}}</span></h2>
+        DEPARTMENT OF INFORMATION TECHNOLOGY<br>
+
+        <br><h3>   &nbsp&nbspFACULTY PROFILE</h3><br>
+         <ol>
+         
+            {% for i in ob %}
+            <h4><li><a href =  {% url 'user_prof' i.name %}>{{i.name}}</a></li></h4><br>
+            
+            {% endfor %}
+        </ol>
+
+    </body>
+</html>
