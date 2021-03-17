@@ -1,0 +1,1465 @@
+<html>
+<head>
+<meta charset = 'utf-8'>
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding:4px;
+    font-family: "Times New Roman", Times, serif;
+    font-size:12px;
+
+}
+h1,h5{
+    font-family: "Times New Roman", Times, serif;
+    font-size:14px;
+}
+h6{
+    font-family: "Times New Roman", Times, serif;
+    font-size:13px; 
+}
+p{
+    font-family: "Times New Roman", Times, serif;
+    font-size:16px;
+}
+
+</style>
+</head>
+<body>
+<h1  align="center">SRI KRISHNA COLLEGE OF TECHNOLOGY, COIMBATORE</h1>
+<h1  align="center">FACULTY PERFORMANCE APPRAISAL (2020-2021)</h1>
+<h1  align="center">Points Details</h1>				
+<h1  align="left">Name of the Faculty : {{user|title}} - Report</h1>
+<h1  align="left">Deisgnation : {{ staff.desig|title }}</h1>
+<h1  align="left">Department : {{ staff.dept|upper }}</h1>
+<hr>
+{% if obj %}
+<table>
+<strong align="centre"><p>1. Academics [Max. 50 Points]:</p></strong>
+<thead>
+  <tr>
+  <th><h5>Description</h5></th>
+  <th><h5>Points Claimed</h5></th>
+  <th><h5>Submitted Pdf Name</h5></th>
+  <th><h5>Points Awarded</h5></th>
+ </tr>
+ </thead>
+ <tbody>
+ {% for i in obj %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %} 
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj2 %}
+<table >
+<strong align="centre"><p>1.2 Student Feedback:</p></strong>
+ <tbody>
+ {% for i in obj2 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj3 %}
+<table >
+<strong align="centre"><p>1.3 Innovation in Teaching Learning Process:</p></strong>
+ <tbody>
+ {% for i in obj3 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj4 %}
+<table >
+<strong align="centre"><p>1.4 Project Guidance:</p></strong>
+<strong align="centre"><p>1.4.1 UG</p></strong>
+ <tbody>
+ {% for i in obj4 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj5 %}
+<table >
+<strong align="centre"><p>1.4.2 PG:</p></strong>
+ <tbody>
+ {% for i in obj5 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj6 %}
+<table >
+<strong align="centre"><p>1.4.3 Other than curricular requirement:</p></strong>
+ <tbody>
+ {% for i in obj6 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj7 %}
+<table >
+<strong align="centre"><p>1.5 Involvement in the Student related activities as Tutor and Mentor/Guide:</p></strong>
+<strong align="centre"><p>1.5.1 No. of students AllCleared:</p></strong>
+ <tbody>
+ {% for i in obj7 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj8 %}
+<table >
+<strong align="centre"><p>1.5.2 No. of Students cleared more than 3 arrears in a semester:</p></strong>
+ <tbody>
+ {% for i in obj8 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj9 %}
+<table >
+<strong align="centre"><p>1.5.3 Student published articles/patents/product development:</p></strong>
+ <tbody>
+ {% for i in obj9 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj10 %}
+<table >
+<strong align="centre"><p>1.5.4 Students cleared the Competitive examination/Higher Studies in abroad:</p></strong>
+ <tbody>
+ {% for i in obj10 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj11 %}
+<table >
+<strong align="centre"><p>1.5.5 Students involved Startups/Entrepreneurship:</p></strong>
+ <tbody>
+ {% for i in obj11 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj12 %}
+<table >
+<strong align="centre"><p>1.5.6 Students winning Awards from other institute/industry:</p></strong>
+ <tbody>
+ {% for i in obj12 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj13 %}
+<table >
+<strong align="centre"><p>1.5.7 Wining Prizes in National/International Competitions (First 3 Position)</p></strong>
+ <tbody>
+ {% for i in obj13 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj14 %}
+<table >
+<strong align="centre"><p>1.5.8 Internship / In-plant Training undergone other than curriculum (Min 7 days):</p></strong>
+ <tbody>
+ {% for i in obj14 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if obj15 %}
+<table >
+<strong align="centre"><p>1.5.9 Online Certification Course (Other than required in curriculum):</p></strong>
+ <tbody>
+ {% for i in obj15 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"17:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+
+{% if sdi %}
+
+<table >
+<strong align="centre"><p>2.Self Development [Max. 25 Points] :</p></strong>
+<strong align="centre"><p>2.1 Faculty Attendance (%) (Including Official On-Duty):</p></strong>
+ <tbody>
+ {% for i in sdi %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i2 %}
+<table >
+<strong align="centre"><p>2.2 Guest Lecture Delivered in Other Institution/Society:</p></strong>
+ <tbody>
+ {% for i in i2 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i3 %}
+<table >
+<strong align="centre"><p>2.3 Guest Lecture Delivered in Industry:</p></strong>
+ <tbody>
+ {% for i in i3 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i4 %}
+<table >
+<strong align="centre"><p>2.4 Online Certification by Faculty:</p></strong>
+ <tbody>
+ {% for i in i4 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i5 %}
+<table >
+<strong align="centre"><p>2.5 Patent (if the applicant is faculty/Student):</p></strong>
+<strong align="centre"><p>2.5.1 Patent Filed:</p></strong>
+ <tbody>
+ {% for i in i5 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i6 %}
+<table >
+<strong align="centre"><p>2.5.2 Patent Published:</p></strong>
+ <tbody>
+ {% for i in i6 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i7 %}
+<table >
+<strong align="centre"><p> 2.5.3 Patent Granted:</p></strong>
+ <tbody>
+ {% for i in i7 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i8 %}
+<table >
+<strong align="centre"><p>2.6 Placement Arranged:</p></strong>
+ <tbody>
+ {% for i in i8 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i9 %}
+<table >
+<strong align="centre"><p>2.7 Outreach Events organized:</p></strong>
+ <tbody>
+ {% for i in i9 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i10 %}
+<table >
+<strong align="centre"><p>2.8 MOU agreement:</p></strong>
+ <tbody>
+ {% for i in i10 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i11 %}
+<table >
+<strong align="centre"><p>2.9 Centre for Excellence established:</p></strong>
+ <tbody>
+ {% for i in i11 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i12 %}
+<table >
+<strong align="centre"><p>2.10 Events Participation:</p></strong>
+ <tbody>
+ {% for i in i12 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i13 %}
+<table >
+<strong align="centre"><p>2.11 Awards /Additional Qualification/Recognition received from Government Agencies/Reputed Companies/Institutes:</p></strong>
+ <tbody>
+ {% for i in i13 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if i14 %}
+<table >
+<strong align="centre"><p>2.12 Online courses offered by Faculty:</p></strong>
+ <tbody>
+ {% for i in i14 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi %}
+
+<table >
+<strong align="centre"><p>3. Event Organized [Max. 15 Points]:</p></strong>
+<strong align="centre"><p>3.1 Grant Applied:</p></strong>
+ <tbody>
+ {% for i in evi %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi2 %}
+<table >
+<strong align="centre"><p>3.2 Programme Organized as Co-ordinator (Event should be pre-approved by the management):</p></strong>
+<strong align="centre"><p>3.2.1 International Conference (Max. 3 persons):</p></strong>
+ <tbody>
+ {% for i in evi2 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi3 %}
+<table >
+<strong align="centre"><p>3.2.2 National Conference (Max. 2 persons):</p></strong>
+ <tbody>
+ {% for i in evi3 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi4 %}
+<table >
+<strong align="centre"><p>3.2.3 Workshop/Seminar/Guest Lecture (Max. 1 person):</p></strong>
+ <tbody>
+ {% for i in evi4 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi5 %}
+<table >
+<strong align="centre"><p>3.2.4 FDP/Short Term Training (Max. 2 persons):</p></strong>
+ <tbody>
+ {% for i in evi5 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi6 %}
+<table >
+<strong align="centre"><p>3.2.5 Other Inter College events (Max. 1 person/event):</p></strong>
+ <tbody>
+ {% for i in evi6 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+
+{% if evi7 %}
+<table >
+<strong align="centre"><p>3.3 Programme Organized as Co-Coordinator (Event should be pre-approved by the management):</p></strong>
+<strong align="centre"><p>3.3.1 International Conference (Max. 3 persons):</p></strong>
+ <tbody>
+ {% for i in evi7 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi8 %}
+<table >
+<strong align="centre"><p>3.3.2 National Conference (Max. 2 persons):</p></strong>
+ <tbody>
+ {% for i in evi8 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi9 %}
+<table >
+<strong align="centre"><p>3.3.3 Workshop/Seminar/Guest Lecture (Max. 1 person):</p></strong>
+ <tbody>
+ {% for i in evi9 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi10 %}
+<table >
+<strong align="centre"><p>3.3.4 FDP/Short Term Training (Max. 2 persons):</p></strong>
+ <tbody>
+ {% for i in evi10 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if evi11 %}
+<table >
+<strong align="centre"><p>3.3.5 Other Inter College events (Max. 1 person/event):</p></strong>
+ <tbody>
+ {% for i in evi11 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei %}
+
+<table >
+<strong align="centre"><p>4. Research [Max. 50 Points]:</p></strong>
+<strong align="centre"><p>4.1 Journal Publication:</p></strong>
+<strong align="centre"><p>4.1.1 SCI,SCI(E):</p></strong>
+ <tbody>
+ {% for i in rei %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei2 %}
+<table >
+<strong align="centre"><p>4.1.2 ESCI / Scopus:</p></strong>
+ <tbody>
+ {% for i in rei2 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei3 %}
+<table >
+<strong align="centre"><p>4.2 Book / Book Chapter:</p></strong>
+<strong align="centre"><p>4.2.1 Reputed International Publisher (ex. Springer, Wiley, etc.,):</p></strong>
+ <tbody>
+ {% for i in rei3 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei4 %}
+<table >
+<strong align="centre"><p>4.2.2 Reputed National Publisher (Ex. TATA Mcgraw, Pearson, etc.,):</p></strong>
+ <tbody>
+ {% for i in rei4 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei5 %}
+<table >
+<strong align="centre"><p>4.2.3 Other Books having ISBN number:</p></strong>
+ <tbody>
+ {% for i in rei5 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei6 %}
+<table >
+<strong align="centre"><p>4.3 Conference Publication: Indexed in WOS/Scopus/IEEE:</p></strong>
+ <tbody>
+ {% for i in rei6 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei7 %}
+<table >
+<strong align="centre"><p>4.4 Ph.D., Guideship:</p></strong>
+ <tbody>
+ {% for i in rei7 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei8 %}
+<table >
+<strong align="centre"><p>4.5 Ph.D., Guidance / Pursuing:</p></strong>
+ <tbody>
+ {% for i in rei8 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei9 %}
+<table >
+<strong align="centre"><p>4.6 Patents Published in College Name as applicant:</p></strong>
+ <tbody>
+ {% for i in rei9 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei10 %}
+<table >
+<strong align="centre"><p>4.7 Research Grant (For PI 100% Points, Co-PI - 50% Points):</p></strong>
+<strong align="centre"><p>4.7.1 Applied:</p></strong>
+ <tbody>
+ {% for i in rei10 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei11 %}
+<table >
+<strong align="centre"><p>4.7.2 Received:</p></strong>
+ <tbody>
+ {% for i in rei11 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei12 %}
+<table >
+<strong align="centre"><p>4.8 Consultancy Works (For PI 100% Points, Co-PI - 50% Points):</p></strong>
+ <tbody>
+ {% for i in rei12 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei13 %}
+<table >
+<strong align="centre"><p>4.9 Doctoral Committee Member:</p></strong>
+ <tbody>
+ {% for i in rei13 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei14 %}
+<table >
+<strong align="centre"><p>4.10 Subject Expert for Ph.D., Viva Voice:</p></strong>
+ <tbody>
+ {% for i in rei14 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if rei15 %}
+<table >
+<strong align="centre"><p>4.11 Editorial Board Member (WOS/Scopus):</p></strong>
+ <tbody>
+ {% for i in rei15 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+
+{% if ci %}
+
+<table >
+<strong align="centre"><p>5. Contribution to the College [Max. 10 Points]:</p></strong>
+<strong align="centre"><p>5.1 College level Contribution (Proof signed by Principal):</p></strong>
+ <tbody>
+ {% for i in ci %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if ci2 %}
+<table >
+<strong align="centre"><p>5.2 Department level Contribution (Proof Signed by HOD):</p></strong>
+ <tbody>
+ {% for i in ci2 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+{% if ci3 %}
+<table >
+<strong align="centre"><p>5.3 Citing SKCT articles in Indexed journals:</p></strong>
+ <tbody>
+ {% for i in ci3 %}
+  <tr>
+    <td>
+    {% for j in i.des %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.points}}</td>
+    <td>
+    {% for j in i.pdf.url|slice:"16:" %}
+    {{j}}
+    {% endfor %}
+    </td>
+    <td>{{i.pointsaward}}</td>
+  </tr>
+{% endfor%}
+  </tbody>
+  </tbody>
+</table>
+{% endif %}
+<hr>
+<br>
+<br>
+<br>
+
+
+<h6>{{user|title}}'s Signature &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hod's Signature</h6>
+
+</body>
+
+
+</html>
