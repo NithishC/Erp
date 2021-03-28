@@ -1,1 +1,1 @@
-web: gunicorn herokuweb.wsgi
+web: gunicorn skctwebsite.wsgi
