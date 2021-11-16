@@ -25,7 +25,7 @@ SECRET_KEY = 'v1!fv+5yv^pv*q1)@%rw9-vy*t*9+it)b(4+ii3y3bs_ce38a4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['skct-erp.herokuapp.com']
+ALLOWED_HOSTS = ['skct-erp.herokuapp.com','127.0.0.1']
 
 
 # Application definition
